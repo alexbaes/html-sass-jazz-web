@@ -1,21 +1,164 @@
 body {
+
+  padding: 20px;
   margin: 0;
-  padding: 30px;
   font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  color: $text-color;
+  background-color: $bg;
+  
 }
 
-.uoc-logo {
-  display: block;
-  margin-bottom: 20px;
-  width: 300px;
-  height: auto;
+
+/*------------------------------------*\
+#GENERAL-STYLES
+\*------------------------------------*/
+
+
+.img-cover {
+
+  width: 100%;
+  object-fit: cover;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.flex-img{
+  height: 200px;
 }
+
+.img-footer { max-width: 200px; }
+
+.element--center { text-align: center; }
+
+.mt-7 { margin-top: 70px; }
+
+.carousel-inner{ height: 500px; }
+
+
+/*------------------------------------*\
+  #FLEX PÁGINA EL GRUP
+\*------------------------------------*/
+
+
+.flex {
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  .flex-card { width: 100%; }
+
+  @media (min-width: 768px) {
+
+    .flex-card { width: 25%; }
+
+  }
+
+}
+
+
+/*------------------------------------*\
+  #HERO PÁGINA NOTÍCIES
+\*------------------------------------*/
+
+
+.hero {
+  width: 100%;
+  height: 220px;
+  background-image: url("../images/portada.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+
+  @function heroHeight($num) {
+    @return $num/4;
+  }
+
+  @media (min-width: 768px) { height: heroHeight(1200px); }
+  
+}
+
+
+/*------------------------------------*\
+  #DISSENY HOME NAEGADORS ANTICS
+\*------------------------------------*/
+
+
+@media (min-width: 1024px) {
+
+  .grid-img {
+
+    float: left;
+    width: 60%;
+    margin-right: 50px;
+    
+  }
+
+  .grid-p {
+
+    float: left;
+    width: 60%;
+
+  }
+
+}
+
+
+/*------------------------------------*\
+  #DISSENY HOME NAVEGADORS MODERNS
+\*------------------------------------*/
+
+
+@supports (display:grid) {
+
+  @media (min-width: 1024px) {
+  
+    .grid {
+
+      display: grid;
+      grid-template-columns: 3fr 1fr 50px 1fr 1fr;
+    
+    }
+
+    .grid-img {
+
+      grid-column: 1/3;
+      grid-row: 1/2;
+      float: none;
+      width: 100%;
+      margin-right: 0;
+      
+
+    }
+
+    .grid-h2 {
+
+      grid-column: 4/6;
+      grid-row: 1/2;
+   
+    }
+
+    .grid-div {
+
+      grid-column: 2/3;
+      grid-row: 2/3;
+
+    }
+
+    .grid-p {
+
+      grid-column: 1/2;
+      grid-row: 3/4;
+      float:none;
+      width: 100%;
+   
+    }
+
+    .grid-button {
+      
+      grid-column:4/5;
+      grid-row:3/4;
+   
+    }
+  } 
+}
+

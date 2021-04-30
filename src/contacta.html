@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/styles/main.scss">
+    <title>The Gentlejazz</title>
+  </head>
+  <body>
+  <body>
+      <header class="border-bottom">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.jpg" alt="Logotipo oficial The Gentlejazz">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link active text-primary" aria-current="page" href="grup.html">El grup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="noticies.html">Noticies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Contacta</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+     
+      <main>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/images/slider-1.jpg" class="d-block w-100"  alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/slider-2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/slider-3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 col-md-8 col-xxl-6 offset-md-2 offset-xxl-3">
+            <form action="" class="row g-3">
+              <div class="col-md-6">
+                <label for="inputName" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="inputName" required>
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" required>
+              </div>
+              <div class="col-md-12">
+                <label for="inputMessage" class="form-label">Missatge</label>
+                <textarea class="form-control" id="inputMessage" rows="4" required></textarea>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                  <label class="form-check-label" for="gridCheck">
+                    Accepto els termes i condicions
+                  </label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row mt-7 justify-content-center">
+          <div class="col-12 col-sm-2 element--center">
+            <i class="fas fa-map-marker fa-2x"></i>
+            <p>c/París, 56<br>Tarragona</p>
+          </div>
+          <div class="col-12 col-sm-2 element--center mt-5 mb-5 mt-sm-0 mb-sm-0">
+            <i class="fas fa-envelope fa-2x"></i>
+            <p>hola@jazz.com</p>
+          </div>
+          <div class="col-12 col-sm-2 element--center">
+            <i class="fab fa-whatsapp fa-2x"></i>
+            <p>+34 678 677 688</p>
+          </div>  
+        </div>
+
+        
+
+        
+      </main>
+      <footer class="mt-5 border-top">
+        <div class="container-fluid p-3">
+          <div class="row">
+            <div class="col-4"><img src="assets/images/logo.jpg" class="img-footer" alt="Logotip oficial The Gentlejazz"></div>
+            <div class="col-4">
+              <ul class="nav align-center justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active text-primary" aria-current="page" href="#">El grup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Noticies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Contacta</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4 element--center">
+              <i class="fab fa-instagram fa-2x"></i>
+              </div>
+          </div>
+        </div>
+        
+      </footer>
+    <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

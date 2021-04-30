@@ -3,6 +3,25 @@
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$text-color: #fff;
+$bg: #000;
+
+
+$theme-colors: (
+
+  "primary": #f0c929,
+  "secondary": #fff,
+  "dark": #000
+
+);
+
+$custom-colors: (
+
+  "alex": #f46
+
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$accordion-border-width: 6px;
+$accordion-icon-active-color: $bg;
