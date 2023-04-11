@@ -1,67 +1,68 @@
-# UOC Boilerplate
+# JazzMusicWeb :computer:
 
-UOC Boilerplate is a starter template for the HTML and CSS Tools courses from the [Master's Program in Multimedia Applications](https://estudis.uoc.edu/ca/masters-universitaris/aplicacions-multimedia/presentacio) and the [Master's Program in Web App and Website Development](https://estudis.uoc.edu/ca/masters-universitaris/desenvolupament-llocs-aplicacions-web/presentacio) at the [Universitat Oberta de Catalunya](https://www.uoc.edu). It aims to provide a basic, modern frontend web development starter pack based on Parcel and including a Sass compiler, an ES6 transpiler, minifiers, an image transformer, and development tools.
+## Descripción
+Este repositorio consiste en una práctica realizada durante el Master de Desarrollo de Aplicaciones y Sitios Web de la UOC, correspondiente a la asignatura de Herramientas HTML y CSS. 
+El sitio se creó a partir de UOC Boilerplate, una plantilla de HTML y CSS. Su objetivo es proporcionar un paquete básico y moderno de desarrollo web frontend basado en Parcel e que incluye un compilador Sass, un transpilador ES6, minificadores, un transformador de imágenes y herramientas de desarrollo. Esta es la versión 3.x del Boilerplate de la UOC, disponible desde el semestre UOC 2020-2.
+<br><br>
+Los objetivos de la práctica eran:
+* Desarrollar un sitio web responsive con HTML5 y CSS3
+* Familiarizarse con el uso de la terminal (se utilizó Ubuntu en un sistema Windows).
+* Aprender a instalar NPM y NodeJs.
+* Conocer Parcel
+* Familiarizarse con Github
+* Aprender a validar el código HTML y CSS (Validator.w3.org)
+* Analizar el rednimiento del sitio web (Google Page Speed).
 
-This is the 3.x version of UOC Boilerplate, available since the UOC 2020-2 semester.
+## Autor
+**Àlex Barberà Escribà**
 
+* [LinkedIn](https://linkedin.com/in/alexbaes)
 
-## Requirements
+## Ver ejemplo en vivo
+- [Jazz Music Web](https://gentlejazz.netlify.app/)
 
-[Node.js](http://nodejs.org/) >= 14.15.x
+## Instalación
+El proyecto requiere tener instalado [Node.js](http://nodejs.org/) >= 14.15.x
+Clone este repositorio con `git clone`, o descargue un archivo .zip usando el botón verde superior derecho.
+Usando la Terminal, navegue a la carpeta del proyecto y ejecute `npm install`.
 
+## Características
+* Utiliza el paquete de módulos [Parcel v2](https://v2.parceljs.org).
+* Secuencias de comandos de NPM para un rápido desarrollo y creación de producción (ver Comandos a continuación).
 
-## Getting started
+### Hojas de estilo
 
-Clone this repository with `git clone`, or download a .zip file using the top right green button.
-
-Using the Terminal, navigate to the project folder and run `npm install`.
-
-
-## Features
-
-* Uses [Parcel v2](https://v2.parceljs.org) module bundler.
-* NPM scripts for fast development and production build (see Commands below).
-
-### Stylesheets
-
-* [Sass/SCSS](https://sass-lang.com) to CSS compilation.
-* [PostCSS](https://postcss.org/) features:
-    * Transpile modern CSS with [`postcss-preset-env`](https://preset-env.cssdb.org/features).
-    * Automatically add CSS prefix to unsupported properties with [`autoprefixer`](https://autoprefixer.github.io/).
-    * Automatically minify and optimize CSS code on production build with `@parcel/optimizer-cssnano`.
+* [Sass/SCSS](https://sass-lang.com) para la compilación de CSS.
+* Características de [PostCSS](https://postcss.org/):
+     * Transpilar CSS moderno con [`postcss-preset-env`](https://preset-env.cssdb.org/features).
+     * Agregue automáticamente el prefijo CSS a las propiedades no compatibles con [`autoprefixer`] (https://autoprefixer.github.io/).
+     * Minimice y optimice automáticamente el código CSS en la compilación de producción con `@parcel/optimizer-cssnano`.
 
 ### Scripts
 
-* Allow for modern JavaScript (ES201x/ES8/ES7/ES6…) which is automatically transpiled to ES5 and minifed in production builds, with [Babel](https://babeljs.io/).
+* Permitir JavaScript moderno (ES201x/ES8/ES7/ES6…) que se transpila automáticamente a ES5 y se minimiza en compilaciones de producción, con [Babel](https://babeljs.io/).
 
-### Images
+### Imágenes
 
-* Image transformation with [`@parcel/transformer-image`](https://v2.parceljs.org/recipes/image/) (based on [`sharp`](https://sharp.pixelplumbing.com/)). Do not use on this version since it may cause crashes on Netlify deployments.
+* Transformación de imágenes con [`@parcel/transformer-image`](https://v2.parceljs.org/recipes/image/) (basado en [`sharp`](https://sharp.pixelplumbing.com/) ). No lo use en esta versión, ya que puede causar fallas en las implementaciones de Netlify.
 
-### Development
+## Cómo usar este proyecto
 
-* Development server launch and live reloading on file changes.
-* Friendly error reporting.
+El contenido se encuentra dentro de la carpeta `src/`. Si no desea cambiar la configuración o no está seguro de lo que está haciendo, no edite archivos fuera de la carpeta `src/`.
 
+Ejecute siempre los siguientes comandos durante la etapa de desarrollo y para compilaciones de producción. Tenga en cuenta que se espera que todos los proyectos creados con este modelo se compilen usando `npm run build` antes de publicarse.
 
-## How to use this boilerplate
+### Comandos
 
-Content lives inside the `src/` folder. If you do not want to change the configuration or are unsure about what you are doing, do not edit files outside the `src/` folder.
-
-Always run the following commands during the development stage and for production builds. Please note that it is expected that all projects built with this boilerplate are compiled using `npm run build` before they are published.
-
-### Commands
-
-| Command | Description |
+| Comando | Descripción |
 |---------|-------------|
-| `npm run dev` | Runs a local web server for development and opens the browser to display it. Automatically compiles styles and scripts whenever a file in `src/` is changed, and live reloads the browser. This is what *must be run* on the development stage. |
-| `npm run build` | Compiles and minifies and optimizes the files in the assets folder. The generated compiled and optimized files are located in the `dist/` folder. This is what *must be run* before publishing the project. This is also the build command to be run by external deployment services such as Netlify. The publishable files are then located in the `dist/` folder. |
-| `npm run clean` | Deletes the current `/dist` folder and cache folders. |
-| `npm run test` | Displays a success message if everything is working as expected. |
+| `npm run dev` | Ejecuta un servidor web local para el desarrollo y abre el navegador para mostrarlo. Compila automáticamente estilos y scripts cada vez que se cambia un archivo en `src/` y vuelve a cargar el navegador en vivo. Esto es lo que *debe ejecutarse* en la etapa de desarrollo. |
+| `npm run compilación` | Compila, minimiza y optimiza los archivos en la carpeta de activos. Los archivos compilados y optimizados generados se encuentran en la carpeta `dist/`. Esto es lo que *debe ejecutarse* antes de publicar el proyecto. Este es también el comando de compilación que ejecutarán los servicios de implementación externos, como Netlify. Los archivos publicables se ubican en la carpeta `dist/`. |
+| `npm run clean` | Elimina la carpeta actual `/dist` y las carpetas de caché. |
+| `npm run test` | Muestra un mensaje de éxito si todo funciona como se esperaba. |
+
+## Contactar
+Si quieres contactar puedes escribirme a *alex@baesaudiovisual.com*
 
 
-## Need help? / Want to help out?
 
-Feel free to create a [new issue](https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues/new/) or drop me a line at jorditarrida@uoc.edu.
-
-Are you using this Boilerplate for your projects or for educational purposes? I would love to hear about it!
